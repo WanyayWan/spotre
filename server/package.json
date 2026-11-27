@@ -1,0 +1,19 @@
+{
+  "name": "hum-server",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Hum: a self-hosted music server with a Subsonic-compatible API and a PWA player",
+  "type": "module",
+  "main": "src/index.js",
+  "engines": { "node": ">=22.13" },
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning src/index.js",
+    "dev": "node --disable-warning=ExperimentalWarning --watch src/index.js",
+    "test": "node --disable-warning=ExperimentalWarning --test test/*.test.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "multer": "^2.0.0",
+    "music-metadata": "^11.0.0"
+  }
+}
