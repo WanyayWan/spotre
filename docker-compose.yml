@@ -1,0 +1,13 @@
+# Hum: run with `docker compose up -d`, then open http://<host>:4533
+services:
+  hum:
+    build: .
+    image: hum:latest
+    container_name: hum
+    restart: unless-stopped
+    ports:
+      - "4533:4533"
+    env_file: .env
+    volumes:
+      - ./music:/music        # your music files (uploads land in music/Uploads)
+      - ./data:/data          # database, extracted artwork
